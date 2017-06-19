@@ -11,4 +11,4 @@ def wsgi_application(environ, start_response):
 	headers = [("Content-Type", 'text/plain')]
 	body = get_body(environ)
 	start_response(status, headers)
-	return body
+	return [body]
